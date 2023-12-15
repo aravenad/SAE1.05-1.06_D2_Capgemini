@@ -76,8 +76,9 @@ a:hover {
 }
 
 .container {
+    align-items: start;
+    margin: 0 100px;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
 }
 
@@ -92,6 +93,22 @@ nav a {
 
 
 .content-header {
-    height: 100%;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.content-title h1 {
+    font-size: 5em;
+}
+
+.more a {
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.more a:hover {
+    background-color: #007bff;
 }
