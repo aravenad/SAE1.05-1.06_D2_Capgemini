@@ -10,7 +10,7 @@ header {
     top: 0;
     display: flex;
     justify-content: space-between;
-    background-color: #ff000065;
+    background:linear-gradient(#00000099, #00000085);
     align-items: center;
     margin:0px;
     width: 100%;
@@ -21,7 +21,7 @@ header {
     padding-left:15px;
     padding-right : 10px;
     mask: linear-gradient(black, black, transparent);
-    -webkit-mask: linear-gradient(black, black, rgba(0, 0, 0, 0.749), transparent);
+    -webkit-mask: linear-gradient(black, black, rgba(0, 0, 0, 0.75), transparent);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
 }
@@ -30,6 +30,12 @@ header {
 nav {
     display: flex;
 }
+
+header img {
+    box-shadow: 0 2px 4px rgb(255, 0, 0);
+    /* il faut mettre une meilleur image car ca pue sa mere l'ombre */
+}
+
 
 ul {
     list-style: none;
