@@ -1,41 +1,40 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FFFCF2;
+    font-family: "Torus Notched SemiBold", sans-serif;
+    background-color: #fffdf8;
     color: #333333;
     margin: 0;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    background:linear-gradient(#00000099, #00000085);
-    align-items: center;
-    margin:0px;
-    width: 100%;
-    z-index: 50;
-    height : 50px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left:15px;
-    padding-right : 10px;
-    mask: linear-gradient(black, black, transparent);
-    -webkit-mask: linear-gradient(black, black, rgba(0, 0, 0, 0.75), transparent);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+@font-face {
+    font-family: "Torus Notched SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot");
+    src: url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.svg#Torus Notched SemiBold")format("svg");
 }
 
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height : 100px;
+    padding: 25px 10px 0 10px;
+    margin:0;
+    z-index: 50;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(#ffffff, #ffffff00 75%);
+    mask: linear-gradient(black, black, transparent);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
 
 nav {
     display: flex;
 }
-
-header img {
-    box-shadow: 0 2px 4px rgb(255, 0, 0);
-    /* il faut mettre une meilleur image car ca pue sa mere l'ombre */
-}
-
 
 ul {
     list-style: none;
@@ -44,7 +43,7 @@ ul {
     flex-direction: row;
     justify-content: space-around;
     padding-right: 10px;
-    margin : 0%;
+    margin : 0;
 }
 
 li {
@@ -53,17 +52,6 @@ li {
 
 nav li:last-child {
     margin-right: 15px;
-}
-
-
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 a {
@@ -75,6 +63,27 @@ a:hover {
     color: #FFFCF2;
 }
 
+.a-nav:hover {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+nav a {
+    padding :10px;
+    border-radius: 8px;
+}
+
+.content-header {
+    background-image: url(../img/axel.jpeg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    background-position-y : -350px;
+}
+
 .container {
     align-items: start;
     margin: 0 100px;
@@ -82,25 +91,19 @@ a:hover {
     padding: 20px;
 }
 
-
-nav a {
-    display: block;
-    background-color: #c27eb4;
-    padding :10px;
-    border-radius: 8px;
-}
-
-
-
-.content-header {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
+h1 {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .content-title h1 {
     font-size: 5em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .more a {
