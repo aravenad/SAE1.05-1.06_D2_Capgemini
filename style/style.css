@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Torus Notched SemiBold", sans-serif;
     background-color: #fffdf8;
@@ -63,10 +67,15 @@ a:hover {
     color: #FFFCF2;
 }
 
+.a-nav {
+    transition: transform 0.3s ease-in-out;
+}
+
 .a-nav:hover {
     color: #007bff;
     font-weight: bold;
     text-decoration: underline;
+    transform: translateY(10px);
 }
 
 nav a {
@@ -75,7 +84,7 @@ nav a {
 }
 
 .content-header {
-    background-image: url(../img/axel.jpeg);
+    /*background-image: url(../img/axel.jpeg);*/
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -85,10 +94,11 @@ nav a {
 }
 
 .container {
-    align-items: start;
-    margin: 0 100px;
-    max-width: 1200px;
     padding: 20px;
+    margin: 0 100px;
+    height: 50vh;
+    max-width: 1200px;
+    align-items: start;
 }
 
 h1 {
@@ -100,6 +110,45 @@ h1 {
     font-size: 5em;
     margin-bottom: 15px;
 }
+
+.container-full-width {
+    padding: 20px;
+    margin: 0 100px;
+    height: 50vh;
+    max-width: 100%;
+    align-items: start;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.col-3-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 5% 25px 0;
+}
+
+.col-text {
+    flex: 1;
+    padding: 15px;
+}
+
+.col-img {
+    flex: 1;
+    padding: 15px;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
 
 p {
     font-size: 16px;
@@ -114,4 +163,35 @@ p {
 
 .more a:hover {
     background-color: #007bff;
+}
+
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.top:hover {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+    transform: translateY(-10px);
+}
+
+.top:active {
+    transform: translateY(0px);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333333;
+    color: #fffdf8;
 }
