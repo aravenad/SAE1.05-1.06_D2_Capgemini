@@ -268,18 +268,19 @@ img {
 }
   
 .wrapper {
-    overflow: hidden;
-    height: 80vh;
+    overflow: scroll;
+    max-width: 100%;
+    transform: rotate(-90deg);
 }
   
 .gallery {
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
     -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     display: flex;
     margin-bottom: 2%;
+    transform: rotate(90deg);
 }
   
 .gallery__img {
