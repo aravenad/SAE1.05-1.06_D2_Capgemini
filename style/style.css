@@ -2,21 +2,22 @@
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: "Torus Notched SemiBold";
+    src: local("Torus Notched SemiBold"),
+         url("/font/Torus Notched SemiBold.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.svg#Torus Notched SemiBold") format("svg");
+}
+
 body {
+    padding: 0;
+    margin: 0;
     font-family: "Torus Notched SemiBold", sans-serif;
     background-color: #fffdf8;
     color: #333333;
-    margin: 0;
-}
-
-@font-face {
-    font-family: "Torus Notched SemiBold";
-    src: url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot");
-    src: url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/6aa06a9a432b8417171f60d8351aa310.svg#Torus Notched SemiBold")format("svg");
 }
 
 header {
@@ -36,26 +37,26 @@ header {
     backdrop-filter: blur(8px);
 }
 
-nav {
+header nav {
     display: flex;
 }
 
 ul {
-    list-style: none;
-    padding-left: 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    padding-left: 0;
     padding-right: 10px;
     margin : 0;
+    justify-content: space-around;
+    list-style: none;
 }
 
 li {
     margin: 0 8px;
 }
 
-nav li:last-child {
-    margin-right: 15px;
+nav li {
+    margin: 0 30px;
 }
 
 a {
@@ -68,6 +69,8 @@ a:hover {
 }
 
 .a-nav {
+    display: inline-block;
+    font-size: larger;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -75,10 +78,14 @@ a:hover {
     color: #007bff;
     font-weight: bold;
     text-decoration: underline;
-    transform: translateY(10px);
+    transform: translateY(-5px);
 }
 
-nav a {
+.a-nav:active {
+    transform: translateY(0px);
+}
+
+header nav a {
     padding :10px;
     border-radius: 8px;
 }
@@ -96,40 +103,27 @@ nav a {
 .container {
     display: flex;
     flex-direction: column;
+    height: 50vh;
+    max-width: 1200px;
+    margin: 0 100px;
     justify-content: center;
     align-items: flex-start;
-    height: 50vh;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 100px;
-}
-
-.container-right-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    height: 50vh;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 100px;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 .content-title h1 {
     font-size: 5em;
-    margin-bottom: 15px;
+    margin-bottom: 15%;
 }
 
 .container-full-width {
-    padding: 20px;
-    margin: 0 100px;
     height: 50vh;
     max-width: 100%;
+    margin: 0 100px;
     align-items: start;
 }
 
@@ -153,6 +147,35 @@ h1 {
     margin: 0 5% 25px 0;
 }
 
+.content-section {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+    margin: -250px 100px 0 100px;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-section-ajusted {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-right-side {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    max-width: 1200px;
+    margin: 0 100px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .col-text {
     flex: 1;
     padding: 15px;
@@ -163,8 +186,15 @@ h1 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.5;
+}
+
+.more {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .more a {
@@ -175,6 +205,112 @@ p {
 
 .more a:hover {
     background-color: #007bff;
+}
+
+.more-right {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 60px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.more-right a {
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.more-right a:hover {
+    background-color: #007bff;
+}
+
+.more-left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.more-left a {
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.more-left a:hover {
+    background-color: #007bff;
+}
+
+.content-section-gallery {
+    height: 100vh;
+    margin: 0 100px;
+}
+
+section .content-section-gallery article {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 100px;
+    justify-content: center;
+}
+
+.container-gallery {
+    display: block;
+    height: 90vh;
+    margin: 0 100px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+.wrapper {
+    overflow: hidden;
+    height: 80vh;
+}
+  
+.gallery {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+    margin-bottom: 2%;
+}
+  
+.gallery__img {
+    scroll-snap-align: start;
+    margin: 0 5%;
+    min-width: 20%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+  
+.lil-nav {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.lil-nav a {
+    margin-right: 10px;
+}
+  
+.lil-nav__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: saturate(0);
+    transition: 0.3s ease all;
+}
+
+.lil-nav__img:hover {
+    transform: scale(1.05);
+    filter: saturate(1);
 }
 
 .top {
@@ -206,4 +342,27 @@ footer {
     padding: 20px;
     background-color: #333333;
     color: #fffdf8;
+}
+
+@media screen and (max-width: 62.5em) {
+    body {
+        font-size: 0.875em;
+    }
+
+    .container {
+        margin: 0 50px;
+    }
+
+    .container-right-side {
+        margin: 0 50px;
+    }
+
+    .container-full-width {
+        margin: 0 50px;
+    }
+
+    .content-header {
+        background-position-y : -250px;
+    }
+    
 }
