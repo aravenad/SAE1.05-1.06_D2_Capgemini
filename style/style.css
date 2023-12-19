@@ -166,10 +166,19 @@ h1 {
     align-items: center;
 }
 
-.content-section {
+.content-section-index {
     display: flex;
     flex-direction: column;
     height: 170vh;
+    margin: -250px 100px 0 100px;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
     margin: -250px 100px 0 100px;
     gap: 200px;
     justify-content: center;
