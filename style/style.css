@@ -179,7 +179,7 @@ h1 {
 .content-section {
     display: flex;
     flex-direction: column;
-    margin: -250px 100px 0 100px;
+    margin: 250px 100px;
     gap: 200px;
     justify-content: center;
     align-items: center;
@@ -306,7 +306,7 @@ img {
 .gallery__img {
     scroll-snap-align: start;
     margin: 0 5%;
-    min-width: 20%;
+    min-width: 15%;
     -o-object-fit: cover;
        object-fit: cover;
 }
