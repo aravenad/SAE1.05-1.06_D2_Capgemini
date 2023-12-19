@@ -30,13 +30,15 @@ header {
     z-index: 50;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(#ffffff, #ffffff00 75%);
-    mask: linear-gradient(black, black, transparent);
+    background: linear-gradient(#ffffff, #9198e5 0%, transparent);
+    mask: linear-gradient(#ffffff, #9198e5 0%, transparent);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
 }
 
-
+header:hover {
+    mask: none;
+}
 
 header nav {
     display: flex;
@@ -193,6 +195,16 @@ h1 {
     margin: 0 100px;
     justify-content: center;
     align-items: flex-end;
+}
+
+.container-left-side {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    max-width: 1200px;
+    margin: 0 100px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .col-text {
