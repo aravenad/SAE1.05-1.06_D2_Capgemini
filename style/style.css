@@ -189,6 +189,10 @@ h1 {
 
 }
 
+.row img{
+    border-radius: 12px;
+
+}
 .row-reverse {
     flex-direction: row-reverse;
 }
@@ -427,15 +431,12 @@ img {
 .carousel > .client:nth-child(1) {
     background: url("../img/client1.jpg") no-repeat 50% / cover;
 }
-
 .carousel > div:nth-of-type(2) {
     background: url("../img/client2.png") no-repeat 50% / cover;
 }
-
 .carousel > div:nth-of-type(3) {
     background: url("../img/client3.png") no-repeat 50% / cover;
 }
-
 .carousel > div:nth-of-type(4) {
     background: url("../img/clientQuatre.png") no-repeat 50% / cover;
 }
@@ -528,6 +529,7 @@ footer {
     padding: 20px;
     background-color: #333333;
     color: #fffdf8;
+    height : 35px;
 }
 
 @media screen and (max-width: 62.5em) {
