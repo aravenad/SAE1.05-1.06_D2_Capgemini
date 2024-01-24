@@ -507,6 +507,7 @@ img {
     bottom: 20px;
     right: 20px;
     font-size: 24px;
+    text-shadow: #cacaca 0px 0px 25px;
     color: #007bff;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
