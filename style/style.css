@@ -234,16 +234,9 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap:75px;
     padding : 15px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
 }
 
 .row img{
@@ -403,7 +396,6 @@ p {
     background-color: #007bff;
 }
 
-/* Carousel */
 .carousel {
   width: 100%;
   display: flex;
@@ -558,6 +550,47 @@ p {
 
 .note-importante p {
     margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div form label {
+    display: flex;
+    justify-content: left;
+}
+
+div form input {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+}
+
+.center {
+    text-align: center;
+}
+
+div form textarea {
+    display: flex;
+    justify-content: center;
+    resize: vertical;
+    width: 98%;
+}
+
+div form p {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .top {

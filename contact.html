@@ -158,26 +158,34 @@
                       
                       <div>
                         <form method="post">
+                          <fieldset>
+                            <div>
+                              <label for="nom">Nom :</label>
+                              <input id="nom" type="text" name="nom" placeholder="Votre nom">
+                            </div>
 
-                          <div>
-                            <label for="nom">Nom :</label>
-                            <input id="nom" type="text" name="nom" placeholder="votre nom">
-                          </div>
-                          
-                          <div>
-                            <label for="email">E-mail :</label>
-                            <input id="email" type="email" name="email" placeholder="votre adresse mail" required>
-                          </div>
-                    
-                          <div>
-                            <label for="Candidature">Candidature :</label>
-                            <textarea id = "Candidature" placeholder="Saisir votre candidature"></textarea>
-                          </div>
-                    
-                          <p>
-                            <input type="submit" value="Envoyer">
-                          </p>
-                    
+                            <div>
+                              <label for="prénom">Prénom :</label>
+                              <input id="prénom" type="text" name="prénom" placeholder="Votre prénom">
+                            </div>
+                            
+                            <div>
+                              <label for="email">E-mail :</label>
+                              <input id="email" type="email" name="email" placeholder="Votre adresse mail" required>
+                            </div>
+                      
+                            <div>
+                              <label for="Candidature">Candidature :</label>
+                              <textarea id="Candidature" placeholder="Saisir votre candidature"></textarea>
+                            </div>
+
+                            <p>Vous pouvez joindre ci-dessous<br> votre CV afin de consolider votre candidature ! </p>
+                            <input  class="center" type="file">
+                      
+                            <p>
+                              <input id="envoi" type="submit" value="Envoyer">
+                            </p>
+                          </fieldset>
                         </form>
                       </div>
 
